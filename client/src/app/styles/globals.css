@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root,
+.app {
+  height: 100%;
+  width:100%;
+  @apply text-sm;
+  @apply bg-gray-500;
+  @apply text-gray-900;
+
+}
+
+.search-bar {
+  @apply pl-10 pr-4 py-2 w-50 md:w-60 border-2 border-gray-300 bg-white rounded-lg focus:border-blue-500;
+}
