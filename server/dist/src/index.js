@@ -10,6 +10,9 @@ const helmet_1 = __importDefault(require("helmet"));
 const morgan_1 = __importDefault(require("morgan"));
 const dotenv_1 = __importDefault(require("dotenv"));
 const dashboardRoute_1 = __importDefault(require("./routes/dashboardRoute"));
+const productRoutes_1 = __importDefault(require("./routes/productRoutes"));
+const userRoute_1 = __importDefault(require("./routes/userRoute"));
+const expenseRoutes_1 = __importDefault(require("./routes/expenseRoutes"));
 /* ROUTE IMPORTS */
 /* CONFIGURATIONS */
 dotenv_1.default.config();
@@ -23,6 +26,9 @@ app.use(body_parser_1.default.urlencoded({ extended: false }));
 app.use((0, cors_1.default)());
 /*ROUTES */
 app.use('/dashboard', dashboardRoute_1.default);
+app.use('/products', productRoutes_1.default);
+app.use('/users', userRoute_1.default);
+app.use("/expenses", expenseRoutes_1.default);
 /*SERVER */
 const port = process.env.PORT || 3001;
 app.listen(port, () => {

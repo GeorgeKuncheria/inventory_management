@@ -5,6 +5,10 @@ import helmet from "helmet";
 import morgan from "morgan";
 import dotenv from "dotenv";
 import DashboardRoutes from './routes/dashboardRoute';
+import ProductRoutes from './routes/productRoutes';
+import UserRoutes from './routes/userRoute';
+import expenseRoutes from "./routes/expenseRoutes";
+
 
 
 /* ROUTE IMPORTS */
@@ -29,6 +33,9 @@ app.use(cors());
 
 /*ROUTES */
 app.use('/dashboard',DashboardRoutes);
+app.use('/products',ProductRoutes);
+app.use('/users',UserRoutes);
+app.use("/expenses", expenseRoutes);
 
 /*SERVER */
 

@@ -12,8 +12,8 @@ import {
 } from "recharts";
 
 const CardSalesSummary = () => {
-  const { data, isLoading, isError } = useGetDashboardMetricsQuery();
-  const salesData = data?.salesSummary || [];
+  const { data : dashboardMetrics , isLoading, isError } = useGetDashboardMetricsQuery();
+  const salesData = dashboardMetrics?.salesSummary || [];
 
   const [timeframe, setTimeframe] = useState("weekly");
 
