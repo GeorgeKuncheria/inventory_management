@@ -18,11 +18,13 @@ type AggregatedDataItem = {
   name: string;
   color?: string;
   amount: number;
+  expenseByCategoryId?: string; // Include this if present in your API response
 };
 
 type AggregatedData = {
   [category: string]: AggregatedDataItem;
 };
+
 
 const Expenses = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -44,7 +46,7 @@ const Expenses = () => {
 
   const aggregatedData: AggregatedDataItem[] = useMemo(() => {
     const filtered: AggregatedData = expenses
-      .filter((data: ExpenseByCategorySummary) => {
+      .filter((data: any) => {
         const matchesCategory =
           selectedCategory === "All" || data.category === selectedCategory;
         const dataDate = parseDate(data.date);
@@ -54,7 +56,7 @@ const Expenses = () => {
           (dataDate >= startDate && dataDate <= endDate);
         return matchesCategory && matchesDate;
       })
-      .reduce((acc: AggregatedData, data: ExpenseByCategorySummary) => {
+      .reduce((acc: AggregatedData, data: any) => {
         const amount = parseInt(data.amount);
         if (!acc[data.category]) {
           acc[data.category] = { name: data.category, amount: 0 };
