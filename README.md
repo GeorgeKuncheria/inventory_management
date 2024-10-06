@@ -51,7 +51,7 @@ The application is designed to be **cloud-native**, taking advantage of **Amazon
 
 Here is the architecture diagram showing how different AWS services are integrated into the application:
 
-![AWS Architecture](./client/public/image.png)
+![AWS Architecture](./client/public/Inventory_Management_AWS_Architecture.jpeg)
 
 Figure: Overview of the AWS architecture used in this project.
 
