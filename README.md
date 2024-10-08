@@ -1,5 +1,5 @@
 # Full Stack Inventory Management Dashboard Application
-
+<a href="https://main.d3q3uopf0ip5mf.amplifyapp.com/dashboard">Link to Website</a>
 ## Overview
 
 This project is focused on **building and deploying** a complete **full-stack Inventory Management Dashboard application** that leverages modern technologies for both frontend and backend development. The key components of the application include:
